@@ -17,8 +17,6 @@ public class NonResidentStudent extends Student implements Serializable
 {
     private Long id;
     private FeesImpl tuitionFee;
-    private String studentName;
-    private String studentNumber;
 
     public NonResidentStudent(Builder builder){
         super(builder.studentName, "" + builder.studentNumber);
@@ -109,9 +107,11 @@ public class NonResidentStudent extends Student implements Serializable
         }
 
         public Builder copyNonResidentStudent(NonResidentStudent student){
+
             tuitionFee = student.tuitionFee;
-            studentName = student.studentName;
-            studentNumber = student.studentNumber;
+            studentName = student.getStudentName();
+            studentNumber = "" + student.getStudentNumber();
+            id = student.id;
 
             return this;
         }

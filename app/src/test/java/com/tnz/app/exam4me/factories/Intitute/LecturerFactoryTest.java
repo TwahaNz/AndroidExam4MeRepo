@@ -1,10 +1,7 @@
-package com.tnz.app.exam4me.Factory;
+package com.tnz.app.exam4me.factories.Intitute;
 
 import com.tnz.app.exam4me.domain.Institute.Faculty;
 import com.tnz.app.exam4me.domain.Institute.Lecturer;
-import com.tnz.app.exam4me.domain.Student.NonResidentStudent;
-import com.tnz.app.exam4me.domain.Student.ResidentStudent;
-import com.tnz.app.exam4me.domain.Student.Student;
 
 import org.junit.Assert;
 import org.junit.Test;

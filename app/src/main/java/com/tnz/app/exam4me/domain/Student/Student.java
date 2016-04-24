@@ -38,6 +38,7 @@ public abstract class Student implements Serializable{
                         .build();
         return this;
     }
+
     public Student assignStudentFee(String course){
         studentCurrentFee = TuitionFee.getInstance().retrieveStudentCosts(course);
         return this;
@@ -96,7 +97,9 @@ public abstract class Student implements Serializable{
     public long getId(){
         return id;
     }
+
     public String getStudentName() {return studentName;}
+
     public Integer getStudentNumber() {
         return Integer.parseInt(studentNumber);
     }

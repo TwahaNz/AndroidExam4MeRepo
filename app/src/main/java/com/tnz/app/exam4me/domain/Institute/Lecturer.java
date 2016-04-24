@@ -100,6 +100,7 @@ public class Lecturer implements UploadMarksImpl, Serializable
             this.roomNumber = lecturer.roomNumber;
             this.staffID = lecturer.staffID;
             this.lectureFaculty = lecturer.lectureFaculty;
+            this.id = lecturer.id;
 
             return this;
         }
