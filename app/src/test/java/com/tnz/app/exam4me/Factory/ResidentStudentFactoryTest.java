@@ -1,5 +1,6 @@
-package com.tnz.app.exam4me.factories.Student;
+package com.tnz.app.exam4me.Factory;
 
+import com.tnz.app.exam4me.domain.Student.NonResidentStudent;
 import com.tnz.app.exam4me.domain.Student.ResidentStudent;
 import com.tnz.app.exam4me.domain.Student.Student;
 

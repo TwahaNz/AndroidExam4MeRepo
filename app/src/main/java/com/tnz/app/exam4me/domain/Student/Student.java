@@ -96,9 +96,7 @@ public abstract class Student implements Serializable{
     public long getId(){
         return id;
     }
-
     public String getStudentName() {return studentName;}
-
     public Integer getStudentNumber() {
         return Integer.parseInt(studentNumber);
     }

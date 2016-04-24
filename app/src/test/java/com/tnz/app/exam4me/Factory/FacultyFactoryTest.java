@@ -1,4 +1,4 @@
-package com.tnz.app.exam4me.factories.Intitute;
+package com.tnz.app.exam4me.Factory;
 
 import com.tnz.app.exam4me.domain.Institute.Faculty;
 

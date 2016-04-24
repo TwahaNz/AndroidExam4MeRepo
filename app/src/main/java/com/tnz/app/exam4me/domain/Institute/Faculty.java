@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 public class Faculty implements Serializable
 {
+    private Long id;
     private String facultyName;
     private String facultyLocation;
     
@@ -12,6 +13,11 @@ public class Faculty implements Serializable
     public Faculty(Builder builder){
         this.facultyName = builder.facultyName;
         this.facultyLocation = builder.facultyLocation;
+        this.id = builder.id;
+    }
+
+    public long getId(){
+        return id;
     }
 
     public String getFacultyName(){
@@ -54,4 +60,22 @@ public class Faculty implements Serializable
             }
     }
 
+    @Override
+    public boolean equals(Object o) {
+
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        Faculty faculty = (Faculty) o;
+
+        return id != null ? id.equals(faculty.id) : faculty.id == null;
+    }
+
+    @Override
+    public int hashCode() {
+        return id != null ? id.hashCode() : 0;
+    }
 }

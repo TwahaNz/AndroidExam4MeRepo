@@ -1,6 +1,7 @@
-package com.tnz.app.exam4me.factories.Student;
+package com.tnz.app.exam4me.Factory;
 
 import com.tnz.app.exam4me.domain.Student.NonResidentStudent;
+import com.tnz.app.exam4me.domain.Student.ResidentStudent;
 import com.tnz.app.exam4me.domain.Student.Student;
 
 import org.junit.Assert;
@@ -15,9 +16,6 @@ public class NonResidentStudentTypeFactoryTest {
     public void testCreate() throws Exception {
 
         Student itStudent = new NonResidentStudent.Builder().studentName("Peter").studentNumber("214123546").build();
-
-        itStudent.getStudentNumber();
-
         Assert.assertEquals("Peter",itStudent.getStudentName());
 
     }
