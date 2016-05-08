@@ -1,7 +1,7 @@
 package com.tnz.app.exam4me.factories.Institute;
 
-import com.tnz.app.exam4me.domain.Institute.Faculty;
-import com.tnz.app.exam4me.domain.Institute.Lecturer;
+import com.tnz.app.exam4me.domain.institute.Faculty;
+import com.tnz.app.exam4me.domain.institute.Lecturer;
 
 public class LecturerFactory
 {

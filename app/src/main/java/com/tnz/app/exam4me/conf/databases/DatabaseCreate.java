@@ -26,6 +26,23 @@ public class DatabaseCreate extends SQLiteOpenHelper {
     //SQLite
     private static SQLiteDatabase sqLiteDB;
 
+
+    //STUDENT REGISTRATION
+    public static final String TABLE_REGISTRATION = "registration";
+
+    public static final String COLUMN_REG_ID = "id";
+    public static final String COLUMN_REG_NUMBER = "studNum";
+    public static final String COLUMN_REG_EMAIL = "studEmail";
+    public static final String COLUMN_REG_CODE = "secretCode";
+
+    // Database Creation
+    private static final String CREATE_DATABASE_TABLE_REGISTRATION = " CREATE TABLE " + TABLE_REGISTRATION
+            + " (" + COLUMN_REG_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+            + COLUMN_REG_NUMBER + " TEXT UNIQUE NOT NULL, "
+            + COLUMN_REG_EMAIL + " TEXT NOT NULL, "
+            + COLUMN_REG_CODE + " TEXT );";
+    //END OF REGISTRATION TABLE
+
     //STUDENT TABLE
     public static final String TABLE_STUDENT = "student";
 
@@ -105,6 +122,17 @@ public class DatabaseCreate extends SQLiteOpenHelper {
         sqLiteDB = super.getReadableDatabase();
     }
 
+    public void createAllTables() {
+        openWritableDBConnection();
+
+        dropAllTables();
+
+        sqLiteDB.execSQL(CREATE_DATABASE_TABLE_STUDENT);
+        sqLiteDB.execSQL(CREATE_DATABASE_TABLE_LECTURER);
+        sqLiteDB.execSQL(CREATE_DATABASE_TABLE_EXAM);
+        sqLiteDB.execSQL(CREATE_DATABASE_TABLE_REGISTRATION);
+    }
+
     public void createTable(DatabaseTables table) {
         openWritableDBConnection();
 
@@ -117,6 +145,10 @@ public class DatabaseCreate extends SQLiteOpenHelper {
                 break;
             case RESULTS:
                 sqLiteDB.execSQL(CREATE_DATABASE_TABLE_EXAM);
+                break;
+            case REGISTRATION:
+                sqLiteDB.execSQL(CREATE_DATABASE_TABLE_REGISTRATION);
+                break;
             default:
         }
     }
@@ -126,6 +158,7 @@ public class DatabaseCreate extends SQLiteOpenHelper {
         sqLiteDB.execSQL("DROP TABLE IF EXISTS " + TABLE_STUDENT);
         sqLiteDB.execSQL("DROP TABLE IF EXISTS " + TABLE_LECTURER);
         sqLiteDB.execSQL("DROP TABLE IF EXISTS " + TABLE_EXAM);
+        sqLiteDB.execSQL("DROP TABLE IF EXISTS " + TABLE_REGISTRATION);
         databaseCreateTables = null;
     }
 
@@ -143,6 +176,8 @@ public class DatabaseCreate extends SQLiteOpenHelper {
             case RESULTS:
                 sqLiteDB.execSQL("DROP TABLE IF EXISTS " + TABLE_EXAM);
                 break;
+            case REGISTRATION:
+                sqLiteDB.execSQL("DROP TABLE IF EXISTS " + TABLE_REGISTRATION);
             default:
         }
     }
@@ -172,6 +207,7 @@ public class DatabaseCreate extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_STUDENT);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_LECTURER);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_EXAM);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_REGISTRATION);
         onCreate(db);
     }
 

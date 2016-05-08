@@ -1,10 +1,10 @@
 package com.tnz.app.exam4me;
 
-import com.tnz.app.exam4me.factories.Intitute.FacultyFactoryTest;
-import com.tnz.app.exam4me.factories.Intitute.LecturerFactoryTest;
-import com.tnz.app.exam4me.factories.Student.NonResidentStudentTypeFactoryTest;
-import com.tnz.app.exam4me.factories.Student.ResidentStudentFactoryTest;
-import com.tnz.app.exam4me.factories.Results.ResultsFactoryTest;
+import com.tnz.app.exam4me.factories.intitute.FacultyFactoryTest;
+import com.tnz.app.exam4me.factories.intitute.LecturerFactoryTest;
+import com.tnz.app.exam4me.factories.student.NonResidentStudentTypeFactoryTest;
+import com.tnz.app.exam4me.factories.student.ResidentStudentFactoryTest;
+import com.tnz.app.exam4me.factories.results.ResultsFactoryTest;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;

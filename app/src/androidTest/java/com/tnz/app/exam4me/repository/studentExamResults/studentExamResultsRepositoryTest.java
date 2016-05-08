@@ -3,9 +3,7 @@ package com.tnz.app.exam4me.repository.studentExamResults;
 import android.test.AndroidTestCase;
 
 import com.tnz.app.exam4me.conf.databases.DatabaseCreate;
-import com.tnz.app.exam4me.domain.Results.StudentExamResults;
-import com.tnz.app.exam4me.domain.Student.NonResidentStudent;
-import com.tnz.app.exam4me.repository.student.Implementations.StudentRepositoryImpl;
+import com.tnz.app.exam4me.domain.results.StudentExamResults;
 import com.tnz.app.exam4me.repository.studentExamResults.Implementation.StudentExamResultsRepositoryImpl;
 
 import junit.framework.Assert;

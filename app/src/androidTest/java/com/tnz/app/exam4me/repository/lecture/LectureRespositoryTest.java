@@ -1,12 +1,10 @@
 package com.tnz.app.exam4me.repository.lecture;
 
-import android.database.sqlite.SQLiteDatabase;
 import android.test.AndroidTestCase;
 
-import com.tnz.app.exam4me.conf.Utilities.DatabaseTables;
 import com.tnz.app.exam4me.conf.databases.DatabaseCreate;
-import com.tnz.app.exam4me.domain.Institute.Faculty;
-import com.tnz.app.exam4me.domain.Institute.Lecturer;
+import com.tnz.app.exam4me.domain.institute.Faculty;
+import com.tnz.app.exam4me.domain.institute.Lecturer;
 import com.tnz.app.exam4me.repository.lecturer.Implementation.LecturerRepositoryImpl;
 import com.tnz.app.exam4me.repository.lecturer.LecturerRepository;
 

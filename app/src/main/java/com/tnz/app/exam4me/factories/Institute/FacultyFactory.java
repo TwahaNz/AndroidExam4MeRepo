@@ -1,6 +1,6 @@
 package com.tnz.app.exam4me.factories.Institute;
 
-import com.tnz.app.exam4me.domain.Institute.Faculty;
+import com.tnz.app.exam4me.domain.institute.Faculty;
 
 public class FacultyFactory
 {

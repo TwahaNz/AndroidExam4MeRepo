@@ -6,5 +6,6 @@ package com.tnz.app.exam4me.conf.Utilities;
 public enum DatabaseTables {
         STUDENT,
         LECUTURER,
-        RESULTS
+        RESULTS,
+        REGISTRATION
 }

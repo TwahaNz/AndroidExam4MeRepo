@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 import com.tnz.app.exam4me.conf.databases.DatabaseConstants;
-import com.tnz.app.exam4me.domain.Results.StudentExamResults;
+import com.tnz.app.exam4me.domain.results.StudentExamResults;
 import com.tnz.app.exam4me.repository.studentExamResults.StudentExamResultsRepository;
 
 import java.util.HashSet;
@@ -95,6 +95,41 @@ public class StudentExamResultsRepositoryImpl extends SQLiteOpenHelper implement
                         COLUMN_TERM_FOUR},
                 COLUMN_ID + " =? ",
                 new String[]{String.valueOf(id)},
+                null,null,null,null
+        );
+
+        if (cursor.moveToFirst()){
+            return new StudentExamResults.Builder()
+                    .assignID(cursor.getLong(cursor.getColumnIndex(COLUMN_ID)))
+                    .assignStudentNumber(cursor.getString(cursor.getColumnIndex(COLUMN_STUDENT_NUMBER)))
+                    .assignTerm(cursor.getInt(cursor.getColumnIndex(COLUMN_EXAM_TERM)))
+                    .assignTermOne(cursor.getInt(cursor.getColumnIndex(COLUMN_TERM_ONE)))
+                    .assignTermTwo(cursor.getInt(cursor.getColumnIndex(COLUMN_TERM_TWO)))
+                    .assignTermThree(cursor.getInt(cursor.getColumnIndex(COLUMN_TERM_THREE)))
+                    .assignTermFour(cursor.getInt(cursor.getColumnIndex(COLUMN_TERM_FOUR)))
+                    .build();
+        }
+        else
+            return null;
+    }
+
+    @Override
+    public StudentExamResults findByDetails(String studentNumber) {
+
+        openReadableDBConnection();
+
+        cursor = sqliteDB.query(
+                TABLE_EXAM,
+                new String[]
+                        {COLUMN_ID,
+                                COLUMN_STUDENT_NUMBER,
+                                COLUMN_EXAM_TERM,
+                                COLUMN_TERM_ONE,
+                                COLUMN_TERM_TWO,
+                                COLUMN_TERM_THREE,
+                                COLUMN_TERM_FOUR},
+                COLUMN_STUDENT_NUMBER + " =? ",
+                new String[]{studentNumber},
                 null,null,null,null
         );
 

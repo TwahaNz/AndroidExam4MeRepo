@@ -1,6 +1,5 @@
 package com.tnz.app.exam4me.repository.student.Implementations;
 
-import android.app.ActionBar;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -10,8 +9,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 import com.tnz.app.exam4me.conf.databases.DatabaseConstants;
-import com.tnz.app.exam4me.domain.Student.NonResidentStudent;
-import com.tnz.app.exam4me.domain.Student.Student;
+import com.tnz.app.exam4me.domain.student.NonResidentStudent;
+import com.tnz.app.exam4me.domain.student.Student;
 import com.tnz.app.exam4me.repository.student.StudentRepository;
 
 import java.util.HashSet;

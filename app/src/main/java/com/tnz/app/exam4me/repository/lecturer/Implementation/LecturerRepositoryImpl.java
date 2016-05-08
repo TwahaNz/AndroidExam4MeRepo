@@ -8,9 +8,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import com.tnz.app.exam4me.conf.databases.DatabaseConstants;
-import com.tnz.app.exam4me.domain.Institute.Faculty;
-import com.tnz.app.exam4me.domain.Institute.Lecturer;
-import com.tnz.app.exam4me.repository.Repository;
+import com.tnz.app.exam4me.domain.institute.Faculty;
+import com.tnz.app.exam4me.domain.institute.Lecturer;
 import com.tnz.app.exam4me.repository.lecturer.LecturerRepository;
 
 import java.util.HashSet;

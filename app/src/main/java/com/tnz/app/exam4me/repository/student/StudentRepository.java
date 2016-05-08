@@ -1,6 +1,6 @@
 package com.tnz.app.exam4me.repository.student;
 
-import com.tnz.app.exam4me.domain.Student.Student;
+import com.tnz.app.exam4me.domain.student.Student;
 import com.tnz.app.exam4me.repository.Repository;
 
 /**

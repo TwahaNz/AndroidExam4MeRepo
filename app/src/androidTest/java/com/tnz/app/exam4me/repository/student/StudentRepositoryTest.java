@@ -2,10 +2,9 @@ package com.tnz.app.exam4me.repository.student;
 
 import android.test.AndroidTestCase;
 
-import com.tnz.app.exam4me.conf.Utilities.DatabaseTables;
 import com.tnz.app.exam4me.conf.databases.DatabaseCreate;
-import com.tnz.app.exam4me.domain.Student.NonResidentStudent;
-import com.tnz.app.exam4me.domain.Student.Student;
+import com.tnz.app.exam4me.domain.student.NonResidentStudent;
+import com.tnz.app.exam4me.domain.student.Student;
 import com.tnz.app.exam4me.repository.student.Implementations.StudentRepositoryImpl;
 
 import junit.framework.Assert;
