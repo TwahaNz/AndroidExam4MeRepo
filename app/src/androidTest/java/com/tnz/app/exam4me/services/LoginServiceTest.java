@@ -7,6 +7,7 @@ import android.content.ServiceConnection;
 import android.os.IBinder;
 import android.test.AndroidTestCase;
 
+import com.tnz.app.exam4me.conf.databases.DatabaseCreate;
 import com.tnz.app.exam4me.domain.student.Student;
 import com.tnz.app.exam4me.services.Implementations.LoginServiceImpl;
 import com.tnz.app.exam4me.services.Implementations.RegistrationServiceImpl;
@@ -15,8 +16,14 @@ import junit.framework.Assert;
 
 /**
  * Created by Admin on 2016/05/08.
- * Service for the registered users to use in order to log in into the system
+ * This service will be responsible for allowing the Student to login into the
+ * system. It will also. It is a bound service because the user has to be notifies
+ * at all times during the login phase. Whether successful or not
  */
+
+//Bound Service
+
+
 public class LoginServiceTest extends AndroidTestCase {
 
     private LoginServiceImpl loginService;
@@ -44,6 +51,9 @@ public class LoginServiceTest extends AndroidTestCase {
     }
 
     public void testRegisteredAccount() {
+
+        DatabaseCreate.getInstance(getContext()).createAllTables();
+
         loginService = new LoginServiceImpl();
         Student student = loginService.loginAccount(getContext(), "214", "pet@gmail");
 

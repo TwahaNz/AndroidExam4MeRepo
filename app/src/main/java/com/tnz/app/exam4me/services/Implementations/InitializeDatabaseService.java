@@ -10,8 +10,14 @@ import com.tnz.app.exam4me.conf.databases.DatabaseCreate;
 
 /**
  * Created by Admin on 2016/05/08.
+ * Service allows the automatic creation of all database tables
+ * Instead of relying on classes to create the database tables individually
+ * I decided to create all the tables in one go.
  */
-public class InitializeDatabase extends Service {
+
+//Started Service
+
+public class InitializeDatabaseService extends Service {
 
     private DatabaseCreate databaseCreate;
     private String databse_status;

@@ -19,7 +19,13 @@ import junit.framework.Assert;
 
 /**
  * Created by Admin on 2016/05/08.
+ * Service responsible for fetching the students results fron the database
+ * The reason I chose this service is because the Student can make inquries for their marks
+ * Which will loaded from the service and return the request to the student
  */
+
+//Bound Service
+
 public class FetchResultsServiceTest extends AndroidTestCase {
 
     private FetchResultsServiceImpl fetchResultsService = new FetchResultsServiceImpl();

@@ -16,8 +16,12 @@ import junit.framework.Assert;
 
 /**
  * Created by Admin on 2016/05/08.
- * Service for the registration of usrs to use the system
+ * Service for the registration of users to use the system. In order for users to
+ * use the system they will first be required to register.
  */
+
+//Bound Service
+
 public class RegistrationServiceTest extends AndroidTestCase {
 
     private RegistrationServiceImpl registrationService;

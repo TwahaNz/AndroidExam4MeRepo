@@ -8,7 +8,13 @@ import com.tnz.app.exam4me.services.Implementations.LoginServiceImpl;
 
 /**
  * Created by Admin on 2016/05/08.
+ * A simple service that will keep record of the goings and logins of the
+ * Student using the system
+ *
  */
+
+//Started Service
+
 public class LoggedInUserServiceTest extends AndroidTestCase {
 
     @Override

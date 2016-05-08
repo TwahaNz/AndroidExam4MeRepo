@@ -17,7 +17,12 @@ import com.tnz.app.exam4me.services.ViewProfileService;
 
 /**
  * Created by Admin on 2016/05/08.
+ * This service will allow the registered user to view their current profile
+ * information which they could change at anytime
  */
+
+//Bound Service
+
 public class ViewProfileServiceImpl extends Service implements ViewProfileService {
 
     private IBinder localBinder = new ViewProfileServiceLocalBinder();
